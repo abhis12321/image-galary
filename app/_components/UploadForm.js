@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function page() {
+export default function UploadForm() {
   return (
     <div className=''>
-      Image galary
+      new image upload form
     </div>
   )
 }
