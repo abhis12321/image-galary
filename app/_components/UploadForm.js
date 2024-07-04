@@ -1,4 +1,5 @@
 "use client"
+import axios from 'axios';
 import Image from 'next/image';
 import React from 'react'
 
@@ -12,7 +13,18 @@ export default function ImageForm() {
     }
 
     const handleSubmit = e => {
-        e.preventDefault();
+        e.preventDefault();   
+        const formdata = new FormData();
+
+        for(let image in images) {
+            formdata.append('images', images[image]);
+        }
+
+        axios.post('/api' , formdata)
+            .then(response => response.data)
+            .then(data => console.log(data))
+            .catch(error => console.log(error.message));
+        
         console.log(images);
     }
 

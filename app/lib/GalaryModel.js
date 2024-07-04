@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
+import { dbConnect } from "./dbConnect";
 
+dbConnect();
 const galarySchema = new mongoose.Schema({
     files:{
         type:[String],
