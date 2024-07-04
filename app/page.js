@@ -5,7 +5,6 @@ export default function page() {
   return (
     <div className=''>
       <UploadForm />
-      Image galary
     </div>
   )
 }
